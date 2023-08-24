@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { CaretDownFilled } from '@ant-design/icons';
 import { Dropdown } from 'antd';
 
 const quoteItems = [
@@ -236,35 +237,43 @@ export default function MainNav() {
                           <>
                             {console.log(item.name, 'Item')}
                             <Dropdown menu={{ items }}>
+                              <div className='flex items-center gap-1  px-3'>
+                                <a
+                                  key={item.name}
+                                  className={classNames(
+                                    item.current
+                                      ? ' text-white'
+                                      : 'text-gray-300  hover:text-white',
+                                    'rounded-md py-2 text-sm font-medium cursor-pointer'
+                                  )}
+                                  aria-current={
+                                    item.current ? 'page' : undefined
+                                  }
+                                >
+                                  {item.name}
+                                </a>
+                                <CaretDownFilled style={{color: "white"}} />
+                              </div>
+                            </Dropdown>
+                          </>
+                        )}
+                        {item.name === 'Quotes' && (
+                          <Dropdown menu={{ items: quoteItems }}>
+                            <div className='flex items-center gap-1 px-3'>
                               <a
                                 key={item.name}
                                 className={classNames(
                                   item.current
                                     ? ' text-white'
                                     : 'text-gray-300  hover:text-white',
-                                  'rounded-md px-3 py-2 text-sm font-medium cursor-pointer'
+                                  'rounded-md py-2 text-sm font-medium cursor-pointer'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                               >
                                 {item.name}
                               </a>
-                            </Dropdown>
-                          </>
-                        )}
-                        {item.name === 'Quotes' && (
-                          <Dropdown menu={{ items: quoteItems }}>
-                            <a
-                              key={item.name}
-                              className={classNames(
-                                item.current
-                                  ? ' text-white'
-                                  : 'text-gray-300  hover:text-white',
-                                'rounded-md px-3 py-2 text-sm font-medium cursor-pointer'
-                              )}
-                              aria-current={item.current ? 'page' : undefined}
-                            >
-                              {item.name}
-                            </a>
+                              <CaretDownFilled style={{color: "white"}} />
+                            </div>
                           </Dropdown>
                         )}
                         {item.name !== 'Products' && item.name !== 'Quotes' && (
