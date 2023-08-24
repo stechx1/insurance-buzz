@@ -31,7 +31,7 @@ export function CarouselWithContent() {
 
             <span className="text-white opacity-95 text-base">We have access to majority of the first-rate insurance companies in Texas to offer you the best coverage at the lowest available price</span>
             <div className="flex gap-2 mt-6">
-              <button onClick={() => router.push("/life-insurance")} style={{ fontSize: '15px' }} className='p-3 font-semibold bg-[#CAD28F] rounded'>Request Quote</button>
+              <button onClick={() => router.push("/life-insurance/term-life-insurance")} style={{ fontSize: '15px' }} className='p-3 font-semibold bg-[#CAD28F] rounded'>Request Quote</button>
 
 
             </div>

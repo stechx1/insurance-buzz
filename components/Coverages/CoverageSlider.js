@@ -69,7 +69,7 @@ const CoverageSlider = () => {
       <div className="relative h-full w-full">
         <div className='grid xl:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-5 sm:px-20 px-10 py-10'>
 
-          <CoverageBox onClick={() => (router.push("/life-insurance"))} image={'/images/coverage1.png'} text={"Life Insurance"} />
+          <CoverageBox onClick={() => (router.push("/life-insurance/term-life-insurance"))} image={'/images/coverage1.png'} text={"Life Insurance"} />
           <CoverageBox onClick={() => (router.push("/super-visa-insurance"))} image={'/images/coverage2.png'} text={"Super Visa Insurance"} />
           <CoverageBox onClick={() => router.push("/visitor-canada")} image={'/images/coverage3.png'} text={"Visitor to Canada"} />
           <CoverageBox onClick={() => router.push("/travel-insurance")} image={'/images/coverage4.png'} text={"Travel Insurance"} />
