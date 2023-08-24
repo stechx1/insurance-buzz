@@ -5,14 +5,14 @@ const CriticalIllnessPage = () => {
   return (
     <div className='flex flex-col gap-5'>
       <img
-        src='/images/lifeinsurance.png'
+        src='/images/image6.png'
         alt='lifeinsurance'
         className='w-full'
       />
 
       <div className='flex flex-col gap-3 '>
         <span className='text-[48px] text-black text-center font-bold'>
-          Life Insurance
+          Critical Life Insurance
         </span>
         <span className='lg:w-[50%] sm:w-[70%] w-[100%] text-center m-auto'>
           Ensure your family's future even when you're not there - life

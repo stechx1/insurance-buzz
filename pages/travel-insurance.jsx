@@ -5,7 +5,7 @@ const TravelInsurance = () => {
   return (
     <div className='flex flex-col gap-5'>
 
-      <img src="/images/lifeinsurance.png" alt='travelinsurance' className='w-full' />
+      <img src="/images/image2.png" alt='travelinsurance' className='w-full' />
 
       <div className='flex flex-col gap-3 '>
         <span className='text-[48px] text-black text-center font-bold'>Travel Insurance</span>
