@@ -300,19 +300,58 @@ export default function MainNav() {
           <Disclosure.Panel className='lg:hidden'>
             <div className='space-y-1 px-2 pb-3 pt-2'>
               {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  className={classNames(
-                    item.current
-                      ? ' text-white'
-                      : 'text-gray-300  hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                <>
+                  {item.name === 'Products' && (
+                    <div className='flex flex-col'>
+                      {console.log(item.name, 'Item')}
+                      <Dropdown menu={{ items }}>
+                        <a
+                          key={item.name}
+                          className={classNames(
+                            item.current
+                              ? ' text-white'
+                              : 'text-gray-300  hover:text-white',
+                            'rounded-md px-3 py-2 text-sm font-medium cursor-pointer'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Dropdown>
+                    </div>
                   )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
+                  {item.name === 'Quotes' && (
+                    <Dropdown menu={{ items: quoteItems }}>
+                      <a
+                        key={item.name}
+                        className={classNames(
+                          item.current
+                            ? ' text-white'
+                            : 'text-gray-300  hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium cursor-pointer'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    </Dropdown>
+                  )}
+                  {item.name !== 'Products' && item.name !== 'Quotes' && (
+                    <Disclosure.Button
+                      key={item.name}
+                      as='a'
+                      className={classNames(
+                        item.current
+                          ? ' text-white'
+                          : 'text-gray-300  hover:text-white',
+                        'block rounded-md px-3 py-2 text-base font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  )}
+                </>
               ))}
             </div>
           </Disclosure.Panel>
