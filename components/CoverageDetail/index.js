@@ -42,7 +42,7 @@ export const CoverageDetail = () => {
             <input
               type='text'
               name='amounr'
-              placeholder='Female'
+              placeholder='Yes'
               id='amount'
               className='bg-[#F8FAFC] rounded px-3 py-3 border border-[#CDCDCD]'
             />
