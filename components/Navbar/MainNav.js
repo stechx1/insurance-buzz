@@ -21,9 +21,9 @@ const quoteItems = [
     label: (
       <a
         rel='noopener noreferrer'
-        href='/vistor-canada'
+        href='/visitor-canada'
       >
-        Vistor to Canada
+        Visitor to Canada
       </a>
     ),
   },
@@ -83,7 +83,7 @@ const items = [
         label: (
           <a
             rel='noopener noreferrer'
-            href='/term-life-insurance'
+            href='/life-insurance/term-life-insurance'
           >
             Term Life Insurance
           </a>
@@ -94,7 +94,7 @@ const items = [
         label: (
           <a
             rel='noopener noreferrer'
-            href='/universal-life-insurance'
+            href='/life-insurance/universal-life-insurance'
           >
             Universal Life Insurance
           </a>
@@ -105,7 +105,7 @@ const items = [
         label: (
           <a
             rel='noopener noreferrer'
-            href='/critical-life-insurance'
+            href='/life-insurance/critical-illness-insurance'
           >
             Critical illness insurance
           </a>
@@ -116,7 +116,7 @@ const items = [
         label: (
           <a
             rel='noopener noreferrer'
-            href='/disability-insurance'
+            href='/life-insurance/disability-insurance'
           >
             Disability Insurance
           </a>
@@ -140,7 +140,7 @@ const items = [
         label: (
           <a
             rel='noopener noreferrer'
-            href='/vistor-canada'
+            href='/visitor-canada'
           >
             Visitor to Canada
           </a>
