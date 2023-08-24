@@ -3,15 +3,11 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Dropdown } from 'antd';
 
-
 const quoteItems = [
   {
     key: '1',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/life-insurance'
-      >
+      <a rel='noopener noreferrer' href='/life-insurance'>
         Life Insurance
       </a>
     ),
@@ -19,10 +15,7 @@ const quoteItems = [
   {
     key: '2',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/visitor-canada'
-      >
+      <a rel='noopener noreferrer' href='/visitor-canada'>
         Visitor to Canada
       </a>
     ),
@@ -30,10 +23,7 @@ const quoteItems = [
   {
     key: '3',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/super-visa-insurance'
-      >
+      <a rel='noopener noreferrer' href='/super-visa-insurance'>
         Super visa insurance
       </a>
     ),
@@ -41,10 +31,7 @@ const quoteItems = [
   {
     key: '4',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/travel-insurance'
-      >
+      <a rel='noopener noreferrer' href='/travel-insurance'>
         Travel Insurance
       </a>
     ),
@@ -52,10 +39,7 @@ const quoteItems = [
   {
     key: '5',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/international-student-insurance'
-      >
+      <a rel='noopener noreferrer' href='/international-student-insurance'>
         International student insurance
       </a>
     ),
@@ -63,10 +47,7 @@ const quoteItems = [
   {
     key: '6',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/need-analysis-calculator'
-      >
+      <a rel='noopener noreferrer' href='/need-analysis-calculator'>
         Need Analysis Calculator
       </a>
     ),
@@ -127,10 +108,7 @@ const items = [
   {
     key: '2',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/travel-insurance'
-      >
+      <a rel='noopener noreferrer' href='/travel-insurance'>
         Travel Insurance
       </a>
     ),
@@ -138,10 +116,7 @@ const items = [
       {
         key: '2-1',
         label: (
-          <a
-            rel='noopener noreferrer'
-            href='/visitor-canada'
-          >
+          <a rel='noopener noreferrer' href='/visitor-canada'>
             Visitor to Canada
           </a>
         ),
@@ -149,10 +124,7 @@ const items = [
       {
         key: '2-2',
         label: (
-          <a
-            rel='noopener noreferrer'
-            href='/super-visa-insurance'
-          >
+          <a rel='noopener noreferrer' href='/super-visa-insurance'>
             Super visa insurance
           </a>
         ),
@@ -160,10 +132,7 @@ const items = [
       {
         key: '2-3',
         label: (
-          <a
-            rel='noopener noreferrer'
-            href='/travel-insurance'
-          >
+          <a rel='noopener noreferrer' href='/travel-insurance'>
             Travel insurance
           </a>
         ),
@@ -171,10 +140,7 @@ const items = [
       {
         key: '2-4',
         label: (
-          <a
-            rel='noopener noreferrer'
-            href='international-student-insurance'
-          >
+          <a rel='noopener noreferrer' href='international-student-insurance'>
             International students insurance
           </a>
         ),
@@ -184,10 +150,7 @@ const items = [
   {
     key: '3',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/auto-insurance'
-      >
+      <a rel='noopener noreferrer' href='/auto-insurance'>
         Auto Insurance
       </a>
     ),
@@ -195,24 +158,40 @@ const items = [
   {
     key: '4',
     label: (
-      <a
-        rel='noopener noreferrer'
-        href='/home-insurance'
-      >
+      <a rel='noopener noreferrer' href='/home-insurance'>
         Home Insurance
       </a>
     ),
   },
   {
     key: '5',
-    label: (
-      <a
-        rel='noopener noreferrer'
-        href='/investments'
-      >
-        Investments
-      </a>
-    ),
+    label: ' Investments',
+    children: [
+      {
+        key: '5-1',
+        label: (
+          <a rel='noopener noreferrer' href='/investments/rrsp'>
+            RRSP
+          </a>
+        ),
+      },
+      {
+        key: '5-2',
+        label: (
+          <a rel='noopener noreferrer' href='/investments/tfsa'>
+            TFSA
+          </a>
+        ),
+      },
+      {
+        key: '5-3',
+        label: (
+          <a rel='noopener noreferrer' href='/investments/resp'>
+            RESP
+          </a>
+        ),
+      },
+    ],
   },
 ];
 
