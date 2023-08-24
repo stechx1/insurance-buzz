@@ -1,8 +1,10 @@
 import React from 'react'
 import { Carousel, IconButton, Button } from "@material-tailwind/react";
 import CoverageBox from './CoverageBox';
+import { useRouter } from 'next/router';
 
 const CoverageSlider = () => {
+  const router = useRouter()
   return (
     <Carousel nextArrow={({ handleNext }) => (
       <IconButton
@@ -67,11 +69,11 @@ const CoverageSlider = () => {
       <div className="relative h-full w-full">
         <div className='grid xl:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-5 sm:px-20 px-10 py-10'>
 
-          <CoverageBox image={'/images/coverage1.png'} text={"Life Insurance"} />
-          <CoverageBox image={'/images/coverage2.png'} text={"Super Visa Insurance"} />
-          <CoverageBox image={'/images/coverage3.png'} text={"Vistor to Canada"} />
-          <CoverageBox image={'/images/coverage4.png'} text={"Travel Insurance"} />
-          <CoverageBox image={'/images/coverage5.png'} text={"International student insurance"} />
+          <CoverageBox onClick={() => (router.push("/life-insurance"))} image={'/images/coverage1.png'} text={"Life Insurance"} />
+          <CoverageBox onClick={() => (router.push("/super-visa-insurance"))} image={'/images/coverage2.png'} text={"Super Visa Insurance"} />
+          <CoverageBox onClick={() => router.push("/vistor-canada")} image={'/images/coverage3.png'} text={"Vistor to Canada"} />
+          <CoverageBox onClick={() => router.push("/travel-insurance")} image={'/images/coverage4.png'} text={"Travel Insurance"} />
+          <CoverageBox onClick={() => router.push("/international-student-insurance")} image={'/images/coverage5.png'} text={"International student insurance"} />
         </div>
 
       </div>
@@ -79,11 +81,11 @@ const CoverageSlider = () => {
       <div className="relative  h-full w-full">
         <div className='grid xl:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-5 sm:px-20 px-10 py-10'>
 
-          <CoverageBox image={'/images/coverage1.png'} text={"Life Insurance"} />
-          <CoverageBox image={'/images/coverage2.png'} text={"Super Visa Insurance"} />
-          <CoverageBox image={'/images/coverage3.png'} text={"Vistor to Canada"} />
-          <CoverageBox image={'/images/coverage4.png'} text={"Travel Insurance"} />
-          <CoverageBox image={'/images/coverage5.png'} text={"International student insurance"} />
+          <CoverageBox onClick={() => router.push("/rrsp")} image={'/images/coverage1.png'} text={"RRSP"} />
+          <CoverageBox onClick={() => router.push("/tfsa")} image={'/images/coverage2.png'} text={"TFSA"} />
+          <CoverageBox onClick={() => router.push("/resp")} image={'/images/coverage3.png'} text={"RESP"} />
+          {/* <CoverageBox image={'/images/coverage4.png'} text={""} /> */}
+          {/* <CoverageBox image={'/images/coverage5.png'} text={"International student insurance"} /> */}
 
         </div>
 

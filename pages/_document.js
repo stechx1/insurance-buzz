@@ -1,10 +1,11 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import React from 'react';
+import { StyleProvider, createCache, extractStyle } from '@ant-design/cssinjs';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
+const MyDocument = () => (
+  <Html lang="en">
+    <Head />
+    <body>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -21,9 +22,36 @@ export default function Document() {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
 
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
-}
+      <Main />
+
+      <NextScript />
+    </body>
+  </Html>
+);
+
+MyDocument.getInitialProps = async (ctx) => {
+  const cache = createCache();
+  const originalRenderPage = ctx.renderPage;
+  ctx.renderPage = () =>
+    originalRenderPage({
+      enhanceApp: (App) => (props) => (
+        <StyleProvider cache={cache}>
+          <App {...props} />
+        </StyleProvider>
+      ),
+    });
+
+  const initialProps = await Document.getInitialProps(ctx);
+  const style = extractStyle(cache, true);
+  return {
+    ...initialProps,
+    styles: (
+      <>
+        {initialProps.styles}
+        <style dangerouslySetInnerHTML={{ __html: style }} />
+      </>
+    ),
+  };
+};
+
+export default MyDocument;
